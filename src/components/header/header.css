@@ -1,0 +1,143 @@
+.headerout{
+    width: 100%;
+    height:50px;
+    background-color: #000;
+    float:left;
+}
+.headerlogo{
+    width: 183px;
+    height:100%;
+    background-image: url(../../assets/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: 40% 0%;
+    float:left;
+    margin-right:38px;
+    cursor: pointer;
+}
+.headercenter{
+    float:left;
+    height:100%;
+    width: 334px;
+}
+.headercenter ul{
+    list-style: none;
+}
+.headercenter ul li{
+    float:left;
+    width: 65px;
+    height:100%;
+    line-height: 50px;
+    cursor: pointer;
+    text-align: center;
+}
+.headercenter ul li a{
+    text-decoration:none;
+    color:#ccc;
+    font-size:15px;
+}
+.headercenter ul li:first-child a{
+    color:#52e2b4 !important; 
+}
+.headercenter ul li:hover{
+    background-color: rgba(226, 212, 212, 0.2);
+}
+.headercenter ul li:hover a{
+    color:#52e2b4 !important;
+}
+
+
+/* 最右边登陆 */
+.denglu{
+    float: right;
+    height:50px;
+    width: 135px;
+    line-height: 50px;
+}
+.denglu a{
+    text-decoration:none;
+    color:#ccc;
+    font-size:15px;
+    width: 44px;
+}
+.denglu a:first-child{
+    border-right: 1px #666 solid;
+    padding-right:11px;
+    margin-right: 15px;
+}
+.denglu a:hover{
+    color:#52e2b4;
+}
+/* 中部vip部分 */
+.centervip{
+    float: right;
+    height:50px;
+    width: 250px;
+}
+.centervip .vip{
+    width: 25px;
+    float: left;
+    height:50px;
+    position: relative;
+}
+.centervip .vip a{
+    position: absolute;
+    top:15px;
+    display:block;
+    width: 25px;
+    height:50%;
+    background-image: url(../../assets/images/new_topbar.png);
+    background-repeat: no-repeat;
+    background-position: 79% 0%; 
+}
+.centervip .vip a:hover{
+    background-position: 67% 0%;
+}
+
+.centervip .centerapp{
+    position: relative;
+    cursor: pointer;
+    margin-left:16px;
+    float: left;
+    width: 25px;
+    height:50px;
+    background-image: url(../../assets/images/new_topbar.png);
+    background-repeat: no-repeat;
+    background-position: 11% -15%; 
+}
+.centervip .centerapp:hover{
+    background-position: 0% -15%;
+}
+.centervip .centerapp:hover .app{
+    height: 102px;
+}
+.centervip .centerapp .app{
+    position: absolute;
+    width: 100px;
+    top:50px;
+    background-color: #222;
+}
+.centervip .centerapp .app ul{
+    list-style: none;
+}
+
+.centervip .centerapp:hover .app ul li{
+    height:33px; 
+}
+.centervip .centerapp .app ul li{
+    line-height: 33px;
+    text-align: center;
+    height:0px;
+    transition: all 0.4s;
+}
+.centervip .centerapp .app ul li:hover{
+    background-color: rgba(226, 212, 212, 0.2);
+}
+.centervip .centerapp .app ul li a{
+    text-decoration:none;
+    font-size:13px;
+    visibility:hidden;
+}
+.centervip .centerapp:hover .app ul li a{
+    visibility: visible;
+    color:#ccc;
+}
