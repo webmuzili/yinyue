@@ -39,7 +39,7 @@ class header extends Component {
                     {/* 中间的vip部分 */}
                     <div className="centervip">
                         <div className="vip">
-                            <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer"> </a>
                         </div>
                         <div className="centerapp">
                             <div className="app">
