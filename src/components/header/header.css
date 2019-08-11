@@ -221,6 +221,14 @@
     color:#fff;
     position: relative;
     padding-left:30px;
+    cursor: pointer;
+}
+.topelse ul li:hover{
+    background-color: rgba(248, 245, 245, 0.3);
+}
+.topelse ul li a{
+    color:#fff;
+    text-decoration:none;
 }
 .topelse ul li .number{
     display: inline-block;

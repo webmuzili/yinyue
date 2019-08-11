@@ -43,7 +43,10 @@ class header extends Component {
         var centerinput= document.querySelector('.centerinput')
         centerinput.style.backgroundColor="#dcdbdb"
         var topelse=document.querySelector('.topelse')
-        topelse.style.display="none"
+        // 增加定时器，防止点击下拉菜单时失去焦点，下拉菜单消失而无法点的问题，增加定时器让其点击完后一段事件后再消失
+        setTimeout(()=>{
+            topelse.style.display="none"
+        },200)
     }
     render() {
         return (
@@ -112,7 +115,9 @@ class header extends Component {
                                         this.state.top.map((value,key)=>{
                                             return (
                                                 <li key={key}>
+                                                    <a href="http://" target="_blank" rel="noopener noreferrer">
                                                     <div className="number">{key+1}</div> {value.title}
+                                                    </a>
                                                 </li>
                                             )
                                         })
