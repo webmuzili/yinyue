@@ -71,29 +71,41 @@
 .centervip{
     float: right;
     height:50px;
-    width: 250px;
+    width: 160px;
 }
-.centervip .vip{
-    width: 25px;
+.centervip .vip,.centerheart{
+    width: 24px;
     float: left;
     height:50px;
     position: relative;
 }
-.centervip .vip a{
+.centerheart{
+    margin-left:8px;
+}
+.centervip .vip a,.centerheart a{
     position: absolute;
     top:15px;
     display:block;
-    width: 25px;
+    width: 24px;
     height:50%;
     background-image: url(../../assets/images/new_topbar.png);
     background-repeat: no-repeat;
     background-position: 79% 0%; 
 }
+.vip a{
+    background-position: 79% 0%; 
+}
+.centerheart a{
+    background-position: 32% 0%; 
+}
 .centervip .vip a:hover{
     background-position: 67% 0%;
 }
+.centerheart a:hover{
+    background-position: 21.5% 0%;
+}
 
-.centervip .centerapp{
+.centervip .centerapp,.centervip .centerupload{
     position: relative;
     cursor: pointer;
     margin-left:16px;
@@ -102,42 +114,50 @@
     height:50px;
     background-image: url(../../assets/images/new_topbar.png);
     background-repeat: no-repeat;
-    background-position: 11% -15%; 
+}
+.centervip .centerapp{
+    background-position: 11% -15%;
+}
+.centervip .centerupload{
+    background-position: 55% -15%;
 }
 .centervip .centerapp:hover{
     background-position: 0% -15%;
 }
-.centervip .centerapp:hover .app{
+.centervip .centerupload:hover{
+    background-position: 44% -15%;
+}
+.centervip .centerapp:hover .app,.centervip .centerupload:hover .upload{
     height: 102px;
 }
-.centervip .centerapp .app{
+.centervip .centerapp .app,.centervip .centerupload .upload{
     position: absolute;
     width: 100px;
     top:50px;
     background-color: #222;
 }
-.centervip .centerapp .app ul{
+.centervip .centerapp .app ul,.centervip .centerupload .upload ul{
     list-style: none;
 }
 
-.centervip .centerapp:hover .app ul li{
+.centervip .centerapp:hover .app ul li,.centervip .centerupload:hover .upload ul li{
     height:33px; 
 }
-.centervip .centerapp .app ul li{
+.centervip .centerapp .app ul li,.centerupload .upload ul li{
     line-height: 33px;
     text-align: center;
     height:0px;
     transition: all 0.4s;
 }
-.centervip .centerapp .app ul li:hover{
+.centervip .centerapp .app ul li:hover,.centerupload .upload ul li:hover{
     background-color: rgba(226, 212, 212, 0.2);
 }
-.centervip .centerapp .app ul li a{
+.centervip .centerapp .app ul li a,.centerupload .upload ul li a{
     text-decoration:none;
     font-size:13px;
     visibility:hidden;
 }
-.centervip .centerapp:hover .app ul li a{
+.centervip .centerapp:hover .app ul li a,.centerupload:hover .upload ul li a{
     visibility: visible;
     color:#ccc;
 }

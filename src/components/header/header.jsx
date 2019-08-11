@@ -50,8 +50,18 @@ class header extends Component {
                                 </ul>
                             </div>
                         </div>
-                        <span className="centerupload"></span>
-                        <span className="centerheart"></span>
+                        <div className="centerupload">
+                            <div className="upload">
+                                <ul>
+                                    <li><a href="http://" target="_blank" rel="noopener noreferrer">上传视频</a></li>
+                                    <li><a href="http://" target="_blank" rel="noopener noreferrer">视频管理</a></li>
+                                    <li><a href="http://" target="_blank" rel="noopener noreferrer">悦单管理</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="centerheart">
+                             <a href="http://" target="_blank" rel="noopener noreferrer"> </a>
+                        </div>
                     </div>
                 </div>
             </div>
