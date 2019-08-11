@@ -161,3 +161,88 @@
     visibility: visible;
     color:#ccc;
 }
+/* 输入框的样式 */
+.centerinput{
+    background-color: #dcdbdb;
+    float:right;
+    width: 220px;
+    height: 30px;
+    margin-top:9px;
+    margin-right:26px;
+    position: relative;
+    border-radius: 2px;
+}
+.centerinput .kong{
+    float:left;
+    height: 30px;
+    width: 12px;
+}
+.centerinput button{
+    position: absolute;
+    top:5px;
+    right:3px;
+    width: 20px;
+    height: 20px;
+    background: url(../../assets/images/topbar_sprite4.png) no-repeat  -262px -25px;
+    border:none;
+    cursor: pointer;
+    outline: none;
+}
+.input{
+    position: absolute;
+    width: 178px;
+    height: 30px;
+    left:10px
+}
+.input input{
+    margin-top:9px;
+    width: 100%;
+    color:#898989;
+    outline: none;
+    border:none;
+    background-color: transparent;
+    font-size:12px !important;
+}
+/* 搜索排行榜 */
+.topelse{
+    width: 220px;
+    background-color: #000;
+    position: absolute;
+    top:41px;
+    display: none;
+}
+.topelse ul{
+    list-style: none;
+}
+.topelse ul li{
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color:#fff;
+    position: relative;
+    padding-left:30px;
+}
+.topelse ul li .number{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #dedede;
+    position: absolute;
+    top:7px;
+    left:5px;
+    line-height: 16px;
+    text-align: center;
+    color:#000;
+}
+.topelse ul li:nth-child(1) .number{
+    background-color: #ff6666;
+    color:#fff;
+}
+.topelse ul li:nth-child(2) .number{
+    background-color: #3be3ff;
+    color:#fff;
+}
+.topelse ul li:nth-child(3) .number{
+    background-color: #33ffc5;
+    color:#fff;
+}
