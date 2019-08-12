@@ -45,12 +45,13 @@ class swipe extends Component {
             this.setState({
                 num:num
             })
-        },2000)
+        },4000)
         this.setState({
             timer:shi
         })
     }
     titleover=(e)=>{
+        clearInterval(this.state.timer)
         var index=e.target.dataset.index
         var swipeimgs=document.querySelectorAll(".swipeimg ul li")
         var titles=document.querySelectorAll(".swipetitle a")
@@ -90,7 +91,7 @@ class swipe extends Component {
             this.setState({
                 num:num
             })
-        },2000)
+        },4000)
         this.setState({
             timer:timers
         })
