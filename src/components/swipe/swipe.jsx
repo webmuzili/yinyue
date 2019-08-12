@@ -63,8 +63,7 @@ class swipe extends Component {
         this.setState({
             timer:shi
         })
-    }
-    
+    } 
     componentDidMount=()=>{
         var num=this.state.num
         var imgs=document.querySelectorAll(".swipeimg ul li")
