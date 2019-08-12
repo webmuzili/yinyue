@@ -1,0 +1,60 @@
+.swipeinclude{
+    width: 100%;
+    height: 480px;
+    position: relative;
+}
+.swipeimg{
+    width: 100%;
+    height: 100%;
+}
+.swipetitle{
+    padding-top:15px;
+    position: absolute;
+    top:29px;
+    right:55px;
+    width: 258px;
+    height: 390px;
+    background-color: #000;
+    opacity: 0.6;
+    padding-right: 14px;
+    text-align: center;
+}
+.swipetitle a{
+    display:inline-block;
+    height:34px;
+    line-height:34px;
+    width: 230px;
+    text-decoration: none;
+    color:#fff;
+    font-size:14px;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.swipetitle a:first-child{
+    color: #00ffc3;
+}
+
+.swipeimg ul {
+    list-style: none;
+    position: relative;
+}   
+.swipeimg ul li{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height:480px;
+    overflow: hidden;
+}
+.swipeimg ul li  a img{
+    height: 100%;
+    opacity: 0;
+    z-index:0;
+    transition: all 0.5s;
+}
+.swipeimg ul li:nth-child(1)  a img{
+    opacity: 1;
+    z-index:1;
+}

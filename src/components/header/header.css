@@ -3,6 +3,9 @@
     height:50px;
     background-color: #000;
     float:left;
+    position:fixed;
+    top:0;
+    z-index:10;
 }
 .headerlogo{
     width: 183px;
