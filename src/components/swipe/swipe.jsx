@@ -24,28 +24,11 @@ class swipe extends Component {
         clearInterval(this.state.timer)
     }
     lileave=()=>{
-        var num=this.state.num
         var imgs=document.querySelectorAll(".swipeimg ul li")
         var tops=document.querySelectorAll(".swipetitle a")
         var shi=setInterval(()=>{
-            if(num>tops.length-1){
-                num=0
-            }
-            for(var j=0;j<tops.length;j++){
-                tops[j].style.color="#fff"
-            }
-            tops[num].style.color="#00ffc3"
-            for(var i=0;i<imgs.length;i++){
-                imgs[i].querySelector("img").style.opacity="0"
-                imgs[i].querySelector("img").style.zIndex="0"
-            }
-            imgs[num].querySelector("img").style.opacity="1"
-            imgs[num].querySelector("img").style.zIndex="1"
-            num++
-            this.setState({
-                num:num
-            })
-        },4000)
+            this.change(tops,imgs)
+        },5000)
         this.setState({
             timer:shi
         })
@@ -65,35 +48,39 @@ class swipe extends Component {
         }
         swipeimgs[index].querySelector("img").style.opacity="1"
         swipeimgs[index].querySelector("img").style.zIndex="1"
+        index++
         this.setState({
             num:index
         })
     }
     componentDidMount=()=>{
-        var num=this.state.num
         var imgs=document.querySelectorAll(".swipeimg ul li")
         var tops=document.querySelectorAll(".swipetitle a")
         var timers=setInterval(()=>{
-            if(num>tops.length-1){
-                num=0
-            }
-            for(var j=0;j<tops.length;j++){
-                tops[j].style.color="#fff"
-            }
-            tops[num].style.color="#00ffc3"
-            for(var i=0;i<imgs.length;i++){
-                imgs[i].querySelector("img").style.opacity="0"
-                imgs[i].querySelector("img").style.zIndex="0"
-            }
-            imgs[num].querySelector("img").style.opacity="1"
-            imgs[num].querySelector("img").style.zIndex="1"
-            num++
-            this.setState({
-                num:num
-            })
-        },4000)
+            this.change(tops,imgs)
+        },5000)
         this.setState({
             timer:timers
+        })
+    }
+    change=function(tops,imgs){
+        var num=this.state.num
+        if(num>tops.length-1){
+            num=0
+        }
+        for(var j=0;j<tops.length;j++){
+            tops[j].style.color="#fff"
+        }
+        tops[num].style.color="#00ffc3"
+        for(var i=0;i<imgs.length;i++){
+            imgs[i].querySelector("img").style.opacity="0"
+            imgs[i].querySelector("img").style.zIndex="0"
+        }
+        imgs[num].querySelector("img").style.opacity="1"
+        imgs[num].querySelector("img").style.zIndex="1"
+        num++
+        this.setState({
+            num:num
         })
     }
     render() {
@@ -104,7 +91,7 @@ class swipe extends Component {
                         <ul>
                             {this.state.swipe.map((value,key)=>{
                                 return (
-                                    <li key={key} data-num={key} onMouseEnter={this.lienter} onMouseLeave={this.lileave}>
+                                    <li key={key} onMouseEnter={this.lienter} onMouseLeave={this.lileave}>
                                         <a href="http://" target="_blank" rel="noopener noreferrer">
                                             <img src={value.img} alt=""/>
                                         </a>

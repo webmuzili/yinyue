@@ -1,0 +1,135 @@
+.mvListout{
+    width: 100%;
+    height: 485px;
+    background-color: #fff;
+    position: relative;
+}
+.mvListout .mvListin{
+    height:485px;
+    /* background-color: skyblue; */
+    width: 1220px;
+    margin:0 auto;
+}
+.mvListTitle{
+    width: 100%;
+    height: 20px;
+    padding-top:34px;
+    padding-bottom:16px;
+}
+.mvListTitleLeft{
+    float: left;
+    width: 40px;
+    height: 20px;
+}
+.mvListTitleRight{
+    float:right;
+    list-style: none;
+    height: 20px;
+}
+.mvListTitleRight li{
+    float: left;
+    width: 28px;
+    height:20px;
+    padding:0 19px;
+    border-right:1px solid #666;
+    text-align: center;
+}
+.mvListTitleRight li:last-child{
+    border:none;
+}
+.mvListTitleRight li span{
+    text-decoration:none;
+    color:#666;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom:16px;
+    cursor: pointer;
+}
+.mvListTitleRight li:first-child span{
+    border-bottom: 2px solid #52e2c0;
+}
+.mvListTitleRight li span:hover{
+    color:#52e2c0 !important;
+}
+.line{
+    height: 2px;
+    background-color: #f4f4f4;
+    margin-top:2px;
+}
+.mvListInclude{
+    position: relative;
+    width: 100%;
+    height: 398px;
+    margin-top:17px;
+    /* background-color: skyblue; */
+    overflow: hidden;
+}
+.mvListInclude ul{
+    /* width: 4470px; */
+    position: absolute;
+    height: 100%;
+    list-style: none;
+    transition: all 0.5s;
+}
+.mvListInclude ul li{
+    height:100%;
+    width: 220px;
+    float:left;
+    margin-right:30px;
+}
+.mvListInclude ul li:last-child{
+    margin-right:0;
+}
+.mvListInclude ul li .include a{
+    text-decoration: none;
+    color:#333;
+}
+.mvListInclude ul li .include a img{
+    width: 220px;
+    height: 124px;
+    display: block;
+}
+.mvListInclude ul li .include a h5{
+    font-weight: normal;
+    font-size:14px;
+    width: 196px;
+    line-height: 16px;
+    margin:12px 12px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mvListInclude ul li .include a p{
+    font-size: 12px;
+    line-height:16px;
+    margin:0px 12px 21px;
+    color:#a4a4a4;
+    width: 196px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 左右切换按钮 */
+.mvListLeft,.mvListRight{
+    cursor: pointer;
+    width: 26px;
+    height: 115px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    background: url(../../assets/images/turn_arrow2.png) no-repeat;
+}
+.mvListLeft{
+    left:23px;
+    background-position: 68% 0%;
+}
+.mvListLeft:hover{
+    background-position: 0% 0%;
+}
+.mvListRight{
+    right:23px;
+    background-position: 100% 0%;
+}
+.mvListRight:hover{
+    background-position: 30% 0%;
+}
