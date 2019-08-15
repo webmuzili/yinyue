@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Footer from '../footer/footer.jsx'
-import Swipe from '../swipe/swipe.jsx'
+import Swipe from '../swipe/indexswipe/swipe.jsx'
 import MvList from '../mvList/mvList.jsx'
 
 import './index.css'

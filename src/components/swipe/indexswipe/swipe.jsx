@@ -5,16 +5,16 @@ class swipe extends Component {
         super(props);
         this.state = { 
             swipe:[
-                {title:"五月天《玫瑰少年》MV首秀",img:require('../../assets/images/swipeimage/swipe1.jpg')},
-                {title:"薛之谦《这么久没见》MV首秀",img:require('../../assets/images/swipeimage/swipe2.jpg')},
-                {title:"江映蓉《我是你的猫》舞蹈版MV首",img:require('../../assets/images/swipeimage/swipe3.png')},
-                {title:"Tiffany Young《Magnetic Moon》MV首播",img:require('../../assets/images/swipeimage/swipe4.jpg')},
-                {title:"Ariana Grande《Boyfriend》MV首播",img:require('../../assets/images/swipeimage/swipe5.jpg')},
-                {title:"蔡徐坤《YOUNG》MV首秀",img:require('../../assets/images/swipeimage/swipe6.jpg')},
-                {title:"李宇春《哇》MV首秀",img:require('../../assets/images/swipeimage/swipe7.png')},
-                {title:"五月天《转眼》MV首秀",img:require('../../assets/images/swipeimage/swipe8.jpg')},
-                {title:"袁维娅《Trust Myself》MV首秀",img:require('../../assets/images/swipeimage/swipe9.jpg')},
-                {title:"StrayKids《Side Effects》MV首播",img:require('../../assets/images/swipeimage/swipe10.jpg')},
+                {title:"五月天《玫瑰少年》MV首秀",img:require('../../../assets/images/swipeimage/swipe1.jpg')},
+                {title:"薛之谦《这么久没见》MV首秀",img:require('../../../assets/images/swipeimage/swipe2.jpg')},
+                {title:"江映蓉《我是你的猫》舞蹈版MV首",img:require('../../../assets/images/swipeimage/swipe3.png')},
+                {title:"Tiffany Young《Magnetic Moon》MV首播",img:require('../../../assets/images/swipeimage/swipe4.jpg')},
+                {title:"Ariana Grande《Boyfriend》MV首播",img:require('../../../assets/images/swipeimage/swipe5.jpg')},
+                {title:"蔡徐坤《YOUNG》MV首秀",img:require('../../../assets/images/swipeimage/swipe6.jpg')},
+                {title:"李宇春《哇》MV首秀",img:require('../../../assets/images/swipeimage/swipe7.png')},
+                {title:"五月天《转眼》MV首秀",img:require('../../../assets/images/swipeimage/swipe8.jpg')},
+                {title:"袁维娅《Trust Myself》MV首秀",img:require('../../../assets/images/swipeimage/swipe9.jpg')},
+                {title:"StrayKids《Side Effects》MV首播",img:require('../../../assets/images/swipeimage/swipe10.jpg')},
             ],
             timer:null,
             num:1
