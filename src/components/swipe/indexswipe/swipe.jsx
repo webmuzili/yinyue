@@ -1,21 +1,35 @@
 import React, { Component } from 'react';
+import axios from 'axios'
+
 import './swipe.css'
 class swipe extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
             swipe:[
-                {title:"五月天《玫瑰少年》MV首秀",img:require('../../../assets/images/swipeimage/swipe1.jpg')},
-                {title:"薛之谦《这么久没见》MV首秀",img:require('../../../assets/images/swipeimage/swipe2.jpg')},
-                {title:"江映蓉《我是你的猫》舞蹈版MV首",img:require('../../../assets/images/swipeimage/swipe3.png')},
-                {title:"Tiffany Young《Magnetic Moon》MV首播",img:require('../../../assets/images/swipeimage/swipe4.jpg')},
-                {title:"Ariana Grande《Boyfriend》MV首播",img:require('../../../assets/images/swipeimage/swipe5.jpg')},
-                {title:"蔡徐坤《YOUNG》MV首秀",img:require('../../../assets/images/swipeimage/swipe6.jpg')},
-                {title:"李宇春《哇》MV首秀",img:require('../../../assets/images/swipeimage/swipe7.png')},
-                {title:"五月天《转眼》MV首秀",img:require('../../../assets/images/swipeimage/swipe8.jpg')},
-                {title:"袁维娅《Trust Myself》MV首秀",img:require('../../../assets/images/swipeimage/swipe9.jpg')},
-                {title:"StrayKids《Side Effects》MV首播",img:require('../../../assets/images/swipeimage/swipe10.jpg')},
-            ],
+                {title:"",img:""},
+                {title:"",img:""},
+                {title:"",img:""},
+                {title:"",img:""},
+                {title:"",img:""},
+                {title:"",img:""},
+                {title:"",img:""},
+                {title:"",img:""},
+                {title:"",img:""},
+                {title:"",img:""}
+            ], 
+            // swipe1:[
+            //     {title:"五月天《玫瑰少年》MV首秀",img:require('../../../assets/images/swipeimage/swipe1.jpg')},
+            //     {title:"薛之谦《这么久没见》MV首秀",img:require('../../../assets/images/swipeimage/swipe2.jpg')},
+            //     {title:"江映蓉《我是你的猫》舞蹈版MV首",img:require('../../../assets/images/swipeimage/swipe3.png')},
+            //     {title:"Tiffany Young《Magnetic Moon》MV首播",img:require('../../../assets/images/swipeimage/swipe4.jpg')},
+            //     {title:"Ariana Grande《Boyfriend》MV首播",img:require('../../../assets/images/swipeimage/swipe5.jpg')},
+            //     {title:"蔡徐坤《YOUNG》MV首秀",img:require('../../../assets/images/swipeimage/swipe6.jpg')},
+            //     {title:"李宇春《哇》MV首秀",img:require('../../../assets/images/swipeimage/swipe7.png')},
+            //     {title:"五月天《转眼》MV首秀",img:require('../../../assets/images/swipeimage/swipe8.jpg')},
+            //     {title:"袁维娅《Trust Myself》MV首秀",img:require('../../../assets/images/swipeimage/swipe9.jpg')},
+            //     {title:"StrayKids《Side Effects》MV首播",img:require('../../../assets/images/swipeimage/swipe10.jpg')},
+            // ],
             timer:null,
             num:1
          };
@@ -54,6 +68,14 @@ class swipe extends Component {
         })
     }
     componentDidMount=()=>{
+        // 为了避免数据更新找不到元素,在static中放置空的数据
+        var url="http://127.0.0.1:3001/swipe"
+        axios.get(url).then((res)=>{
+            this.setState({
+                swipe:res.data
+            })
+        })
+
         var imgs=document.querySelectorAll(".swipeimg ul li")
         var tops=document.querySelectorAll(".swipetitle a")
         var timers=setInterval(()=>{
@@ -63,6 +85,7 @@ class swipe extends Component {
             timer:timers
         })
     }
+
     change=function(tops,imgs){
         var num=this.state.num
         if(num>tops.length-1){
